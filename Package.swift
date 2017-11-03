@@ -1,3 +1,4 @@
+// swift-tools-version:4.0
 //
 //  Package.swift
 //  LinuxBridge
@@ -20,5 +21,11 @@
 import PackageDescription
 
 let package = Package(
-	name: "LinuxBridge"
+    name: "LinuxBridge",
+    products: [
+        .library(name: "LinuxBridge", targets: ["LinuxBridge"])
+    ],
+    targets: [
+        .target(name: "LinuxBridge", path: ".", sources: ["LinuxBridge"])
+    ]
 )
